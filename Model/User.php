@@ -79,13 +79,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     protected $roles;
 
-    /**
-     * @var Collection|UserOAuthInterface[]
-     *
-     * @psalm-var Collection<array-key, UserOAuthInterface>
-     */
-    //protected $oauthAccounts;
-
     /** @var string|null */
     protected $email;
 
@@ -99,9 +92,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct()
     {
-        /** @var ArrayCollection<array-key, UserOAuthInterface> $this->oauthAccounts */
-        //$this->oauthAccounts = new ArrayCollection();
-
         $this->createdAt = new \DateTime();
 
         // Set here to overwrite default value from trait
@@ -155,9 +145,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->plainPassword;
     }
 
-    public function setPlainPassword(?string $password): void
+    public function setPlainPassword(?string $plainPassword): void
     {
-        $this->plainPassword = $password;
+        $this->plainPassword = $plainPassword;
     }
 
     public function getPassword(): ?string
@@ -165,9 +155,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
-    public function setPassword(?string $password): void
+    public function setPassword(?string $encodedPassword): void
     {
-        $this->password = $password;
+        $this->password = $encodedPassword;
     }
 
     public function getExpiresAt(): ?\DateTimeInterface
