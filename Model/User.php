@@ -108,8 +108,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * For BC to remove with symfony 6
+     *
+     * @return null
      */
-
     public function getSalt()
     {
         return null;
@@ -135,7 +136,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function getUsername(): ?string
+    public function getUsername():? string
     {
         return $this->email;
     }
