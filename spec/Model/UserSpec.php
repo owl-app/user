@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Model;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\User\Model\UserInterface;
+use PhpSpec\ObjectBehavior;
 
 final class UserSpec extends ObjectBehavior
 {

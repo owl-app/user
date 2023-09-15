@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Security\Checker;
 
+use Owl\Component\User\Security\Checker\UniquenessCheckerInterface;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Sylius\Component\Resource\Repository\RepositoryInterface;
-use Owl\Component\User\Security\Checker\UniquenessCheckerInterface;
 
 final class TokenUniquenessCheckerSpec extends ObjectBehavior
 {

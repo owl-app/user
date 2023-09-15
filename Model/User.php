@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Owl\Component\User\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Resource\Model\TimestampableTrait;
 use Sylius\Component\Resource\Model\ToggleableTrait;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -85,9 +83,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /** @var string|null */
     protected $hasherName;
 
-    /**
-     * @var array
-     */
+    /** @var array */
     protected $authItems;
 
     public function __construct()
@@ -108,8 +104,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * For BC to remove with symfony 6
-     *
-     * @return null
      */
     public function getSalt()
     {
@@ -136,7 +130,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function getUsername():? string
+    public function getUsername(): ?string
     {
         return $this->email;
     }

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Canonicalizer;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\User\Canonicalizer\CanonicalizerInterface;
+use PhpSpec\ObjectBehavior;
 
 final class CanonicalizerSpec extends ObjectBehavior
 {

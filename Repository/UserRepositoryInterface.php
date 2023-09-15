@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Owl\Component\User\Repository;
 
-use Sylius\Component\Resource\Repository\RepositoryInterface;
 use Owl\Component\User\Model\UserInterface;
+use Sylius\Component\Resource\Repository\RepositoryInterface;
 
 /**
  * @template T of UserInterface
@@ -23,6 +23,5 @@ use Owl\Component\User\Model\UserInterface;
  */
 interface UserRepositoryInterface extends RepositoryInterface
 {
-
     public function findOneByEmail(string $email): ?UserInterface;
 }

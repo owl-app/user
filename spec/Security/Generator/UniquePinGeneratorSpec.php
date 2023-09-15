@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Security\Generator;
 
-use PhpSpec\ObjectBehavior;
-use Sylius\Component\Resource\Generator\RandomnessGeneratorInterface;
 use Owl\Component\User\Security\Checker\UniquenessCheckerInterface;
 use Owl\Component\User\Security\Generator\GeneratorInterface;
+use PhpSpec\ObjectBehavior;
+use Sylius\Component\Resource\Generator\RandomnessGeneratorInterface;
 
 final class UniquePinGeneratorSpec extends ObjectBehavior
 {
@@ -32,7 +32,7 @@ final class UniquePinGeneratorSpec extends ObjectBehavior
 
     function it_throws_invalid_argument_exception_on_instantiation_with_an_out_of_range_length(
         RandomnessGeneratorInterface $generator,
-        UniquenessCheckerInterface $checker
+        UniquenessCheckerInterface $checker,
     ): void {
         $this->beConstructedWith($generator, $checker, -1);
         $this->shouldThrow(\InvalidArgumentException::class)->duringInstantiation();
@@ -42,7 +42,7 @@ final class UniquePinGeneratorSpec extends ObjectBehavior
 
     function it_generates_pins_with_length_stated_on_instantiation(
         RandomnessGeneratorInterface $generator,
-        UniquenessCheckerInterface $checker
+        UniquenessCheckerInterface $checker,
     ): void {
         $pin = '001100';
 

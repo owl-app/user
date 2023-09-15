@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Owl\Component\User\Security\Generator;
 
-use Sylius\Component\Resource\Generator\RandomnessGeneratorInterface;
 use Owl\Component\User\Security\Checker\UniquenessCheckerInterface;
+use Sylius\Component\Resource\Generator\RandomnessGeneratorInterface;
 use Webmozart\Assert\Assert;
 
 final class UniquePinGenerator implements GeneratorInterface
@@ -34,7 +34,7 @@ final class UniquePinGenerator implements GeneratorInterface
     public function __construct(
         RandomnessGeneratorInterface $generator,
         UniquenessCheckerInterface $uniquenessChecker,
-        int $pinLength
+        int $pinLength,
     ) {
         Assert::greaterThanEq($pinLength, 1, 'The value of token length has to be at least 1.');
 

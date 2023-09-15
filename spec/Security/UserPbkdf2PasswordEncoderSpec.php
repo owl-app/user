@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Security;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\User\Model\CredentialsHolderInterface;
 use Owl\Component\User\Security\UserPasswordEncoderInterface;
+use PhpSpec\ObjectBehavior;
 
 final class UserPbkdf2PasswordEncoderSpec extends ObjectBehavior
 {

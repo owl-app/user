@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\User\Security;
 
-use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Owl\Component\User\Model\UserInterface;
 use Owl\Component\User\Security\PasswordUpdaterInterface;
 use Owl\Component\User\Security\UserPasswordEncoderInterface;
+use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 
 final class PasswordUpdaterSpec extends ObjectBehavior
 {
