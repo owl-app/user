@@ -29,7 +29,7 @@ interface UserInterface extends
     ToggleableInterface,
     PasswordHasherAwareInterface
 {
-    public function getEmail(): ?string;
+    public function getEmail(): null|string;
 
     public function setEmail(?string $email): void;
 
