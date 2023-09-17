@@ -105,7 +105,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * For BC to remove with symfony 6
      */
-    public function getSalt()
+    public function getSalt(): ?string
     {
         return null;
     }
@@ -125,7 +125,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = $email;
     }
 
-    public function getUserIdentifier(): ?string
+    public function getUserIdentifier(): string
     {
         return $this->email;
     }
@@ -246,7 +246,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         }
     }
 
-    public function getRoles(): ?array
+    public function getRoles(): array
     {
         return $this->roles;
     }
